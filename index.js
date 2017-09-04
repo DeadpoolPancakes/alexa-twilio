@@ -11,6 +11,7 @@ const languageStrings = {
         translation: {
             SKILL_NAME: 'alexa twilio',
             WELCOME_MESSAGE:'Hello, You can ask me to send a text to a predefined contact',
+            DISPLAY_CARD_TITLE: "Alexa Twilio",
             HELP_MESSAGE: 'If you tell me your message i can send it via text',
             HELP_REPROMPT: 'Im sorry could you please repeat that?',
             STOP_MESSAGE: 'Goodbye',
@@ -69,8 +70,9 @@ const handlers = {
             //replace i and am so the response sounds more natural
             itemName = itemName.replace('i', 'you');
             itemName = itemName.replace('am', 'are');
+            var cardTitle = this.t("DISPLAY_CARD_TITLE", this.t("SKILL_NAME"), itemName);
             const speechOutput = 'Your message ' + itemName + ' has been sent';
-            this.emit(':tellWithCard', speechOutput, this.t('SKILL_NAME'));
+            this.emit(':tellWithCard', itemName, cardTitle, speechOutput, itemName);
             //console.log('end' + response);
 
         });
