@@ -74,7 +74,6 @@ const handlers = {
             const speechOutput = 'Your message ' + itemName + ' has been sent';
             this.emit(':tellWithCard', speechOutput, cardTitle, speechOutput, itemName);
             //console.log('end' + response);
-
         });
         //console.log('message sent');
     })
