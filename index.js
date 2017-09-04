@@ -31,7 +31,7 @@ const handlers = {
         this.emit('SendSms');
     },
     'SendSms': function () {
-        var itemSlot = this.event.request.intent.slots.reason;
+        var itemSlot = this.event.request.intent.slots.message;
         var itemName;
         if (itemSlot && itemSlot.value) {
             //doesnt need to be converted to lowercase

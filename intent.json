@@ -1,0 +1,57 @@
+{
+  "intents": [
+    {
+      "name": "AMAZON.CancelIntent",
+      "samples": []
+    },
+    {
+      "name": "AMAZON.HelpIntent",
+      "samples": []
+    },
+    {
+      "name": "AMAZON.StopIntent",
+      "samples": []
+    },
+    {
+      "name": "MessageIntent",
+      "samples": [
+        "{message}"
+      ],
+      "slots": [
+        {
+          "name": "message",
+          "type": "message",
+          "samples": []
+        }
+      ]
+    }
+  ],
+  "types": [
+    {
+      "name": "message",
+      "values": [
+        {
+          "id": null,
+          "name": {
+            "value": "Hello world",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "wubba lubba dub dub",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "I sent this using alexa and twilio",
+            "synonyms": []
+          }
+        }
+      ]
+    }
+  ]
+}
