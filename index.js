@@ -72,7 +72,7 @@ const handlers = {
             itemName = itemName.replace('am', 'are');
             var cardTitle = this.t("DISPLAY_CARD_TITLE", this.t("SKILL_NAME"), itemName);
             const speechOutput = 'Your message ' + itemName + ' has been sent';
-            this.emit(':tellWithCard', itemName, cardTitle, speechOutput, itemName);
+            this.emit(':tellWithCard', speechOutput, cardTitle, speechOutput, itemName);
             //console.log('end' + response);
 
         });
